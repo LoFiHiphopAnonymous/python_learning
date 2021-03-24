@@ -6,7 +6,7 @@
 print('Hi, how the heck are ya?')
 response = input('Respond...')
 
-if response == "I'm great!":
+if response.startswith("I'm great"):
     greeting = "Well, fuck you then! "
 elif response == "I'm grreat!":
     greeting = "Well if it isn't Tony the FUCKING Tiger.. "

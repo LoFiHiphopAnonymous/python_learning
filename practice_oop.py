@@ -1,11 +1,21 @@
 # practicing with object oriented programming
 
 class Person:
+    number_of_people = 0
     def __init__(self, name, age):
         self.name = name
         self.age = age
         self.carOfChoice = None
-    
+        Person.add_person()
+
+    @classmethod
+    def number_of_people_(cls):
+        return cls.number_of_people
+
+    @classmethod
+    def add_person(cls):
+        cls.number_of_people +=1
+
     def get_Age(self, age):
         self.age = age
 
@@ -42,3 +52,6 @@ print(type(c))
 a.share_Favorite_Car()
 b.share_Favorite_Car()
 c.share_Favorite_Car()
+
+print("I'm sensing there are " + str(Person.number_of_people_()) + " people.")
+
